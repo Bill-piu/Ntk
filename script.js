@@ -35,7 +35,7 @@ function CreateFlingimg(){
   const endimgX = (Math.random() - 0.5) * 1500;  // random x direction
   const endimgY = (Math.random() - 0.5) * 1500;
   const urll=["img/4.jpg","img/6.jpg","img/8.jpg","img/9.jpg","img/10.jpg","img/11.jpg",
-  "img/12.jpg","img/20.jpg","img/21.jpg","img/22.jpg","img/17.jpg","img/3.jpg","img/7.jpg","img/14.jpg"]
+  "img/12.jpg","img/20.jpg","img/21.jpg","img/22.jpg","img/17.jpg","img/3.jpg","img/17.jpg","img/14.jpg"]
   const img = document.createElement("img");
   img.classList.add('imgg');
   img.src=urll[(Math.floor(Math.random() * urll.length))];
