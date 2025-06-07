@@ -46,7 +46,7 @@ function CreateFlingimg(){
   container.appendChild(img);
   setTimeout(() => {
     container.removeChild(img);
-  }, 10000);
+  }, 18000);
 }
 
 const word="ILyNTK"
@@ -82,4 +82,4 @@ function FlyingLetter() {
 // Tạo liên tục các chữ bay mỗi 100ms
 setInterval(createFlyingLetter, 100);
 setInterval(FlyingLetter, 100);
-setInterval(CreateFlingimg, 700);
+setInterval(CreateFlingimg, 1500);
