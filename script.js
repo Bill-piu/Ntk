@@ -46,7 +46,7 @@ function CreateFlingimg(){
   container.appendChild(img);
   setTimeout(() => {
     container.removeChild(img);
-  }, 20000);
+  }, 15000);
 }
 
 const word="ILyNTK"
