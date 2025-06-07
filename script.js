@@ -82,4 +82,4 @@ function FlyingLetter() {
 // Tạo liên tục các chữ bay mỗi 100ms
 setInterval(createFlyingLetter, 100);
 setInterval(FlyingLetter, 100);
-setInterval(CreateFlingimg, 1000);
+setInterval(CreateFlingimg, 700);
