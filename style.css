@@ -19,14 +19,14 @@ body {
     color: white;
     font-size: 20px;
     pointer-events: none;
-    animation: fly 8s linear infinite;
+    animation: fly 10s linear infinite;
     opacity: 0;
   }
   .imgg{
     position: absolute;
     color: white;
     pointer-events: none;
-    animation: fly 10s linear infinite;
+    animation: fly 18s linear infinite;
     opacity: 0;
     size: 10%;
     border-radius: 8%;
