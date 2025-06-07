@@ -1,0 +1,85 @@
+const container = document.getElementById('letter-container');
+const letters = ["💓","💗","💕"];
+
+function createFlyingLetter() {
+  const letter = document.createElement('span');
+  letter.classList.add('letter');
+  letter.innerText = letters[(Math.floor(Math.random() * letters.length))];
+  
+
+  const size = Math.random() * 20 + 10;
+  letter.style.fontSize = `${size}px`;
+
+  const startX = Math.random() * window.innerWidth;
+  const startY = Math.random() * window.innerHeight;
+  const endX = (Math.random() - 0.5) * 1300;  // random x direction
+  const endY = (Math.random() - 0.5) * 1300;  // random y direction
+
+  letter.style.left = `${startX}px`;
+  letter.style.top = `${startY}px`;
+  letter.style.setProperty('--x', `${endX}px`);
+  letter.style.setProperty('--y', `${endY}px`);
+
+  container.appendChild(letter);
+
+  setTimeout(() => {
+    container.removeChild(letter);
+  }, 8000);
+
+
+}
+function CreateFlingimg(){
+
+  const urll=["../tk/img/4.jpg","../tk/img/6.jpg","../tk/img/8.jpg","../tk/img/9.jpg","../tk/img/10.jpg","../tk/img/11.jpg",
+  "../tk/img/12.jpg","../tk/img/20.jpg","../tk/img/21.jpg","../tk/img/22.jpg"]
+  const img = document.createElement("img");
+  img.src=urll[(Math.floor(Math.random() * urll.length))];
+  img.classList.add('imgg');
+  const startimgX = Math.random() * window.innerWidth;
+  const startimgY = Math.random() * window.innerHeight;
+  const endimgX = (Math.random() - 0.5) * 1500;  // random x direction
+  const endimgY = (Math.random() - 0.5) * 1500;
+  img.style.left = `${startimgX}px`;
+  img.style.top = `${startimgY}px`;
+  img.style.setProperty('--x', `${endimgX}px`);
+  img.style.setProperty('--y', `${endimgY}px`);
+  container.appendChild(img);
+  setTimeout(() => {
+    container.removeChild(img);
+  }, 10000);
+}
+
+const word="ILyNTK"
+function FlyingLetter() {
+  
+  const letter = document.createElement('span');
+  letter.classList.add('letter');
+  letter.innerText = word[(Math.floor(Math.random() * word.length))];
+  
+
+  const size = Math.random() * 20 + 10;
+  letter.style.fontSize = `${size}px`;
+
+  const startX = Math.random() * window.innerWidth;
+  const startY = Math.random() * window.innerHeight;
+  const endX = (Math.random() - 0.5) * 1300;  // random x direction
+  const endY = (Math.random() - 0.5) * 1300;  // random y direction
+
+  letter.style.left = `${startX}px`;
+  letter.style.top = `${startY}px`;
+  letter.style.setProperty('--x', `${endX}px`);
+  letter.style.setProperty('--y', `${endY}px`);
+
+  container.appendChild(letter);
+
+  setTimeout(() => {
+    container.removeChild(letter);
+  }, 6000);
+
+
+}
+
+// Tạo liên tục các chữ bay mỗi 100ms
+setInterval(createFlyingLetter, 100);
+setInterval(FlyingLetter, 100);
+setInterval(CreateFlingimg, 1000);
