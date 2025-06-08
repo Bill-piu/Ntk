@@ -37,8 +37,8 @@ function CreateFlingimg(){
   img.classList.add('imgg');
   const startimgX = Math.random() * window.innerWidth-50;
   img.style.left = `${startimgX}px`;
-  img.style.top = '-100px';
-  const endY=window.innerHeight;
+  img.style.top = '-120px';
+  const endY=window.innerHeight+200;
   img.style.setProperty('--x', `${startimgX}px`);
   img.style.setProperty('--y', `${endY}px`);
   container.appendChild(img);
