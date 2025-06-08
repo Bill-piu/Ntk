@@ -30,19 +30,17 @@ function createFlyingLetter() {
 }
 function CreateFlingimg(){
 
-  const startimgX = Math.random() * window.innerWidth;
-  const startimgY = Math.random() * window.innerHeight;
-  const endimgX = (Math.random() - 0.5) * 1500;  // random x direction
-  const endimgY = (Math.random() - 0.5) * 1500;
-  const urll=["img/4.jpg","img/6.jpg","img/8.jpg","img/9.jpg","img/10.jpg","img/11.jpg",
-  "img/12.jpg","img/20.jpg","img/21.jpg","img/22.jpg","img/17.jpg","img/3.jpg","img/17.jpg","img/14.jpg"]
+  const urll=["img/3.jpg","img/4.jpg","img/6.jpg","img/9.jpg","img/10.jpg","img/11.jpg",
+  "img/12.jpg","img/13.jpg","img/14.jpg","img/16.jpg","img/17.jpg","img/20.jpg","img/21.jpg","img/22.jpg"]
   const img = document.createElement("img");
-  img.classList.add('imgg');
   img.src=urll[(Math.floor(Math.random() * urll.length))];
+  img.classList.add('imgg');
+  const startimgX = Math.random() * window.innerWidth-50;
   img.style.left = `${startimgX}px`;
-  img.style.top = `${startimgY}px`;
-  img.style.setProperty('--x', `${endimgX}px`);
-  img.style.setProperty('--y', `${endimgY}px`);
+  img.style.top = '-100px';
+  const endY=window.innerHeight;
+  img.style.setProperty('--x', `${startimgX}px`);
+  img.style.setProperty('--y', `${endY}px`);
   container.appendChild(img);
   setTimeout(() => {
     container.removeChild(img);
@@ -80,6 +78,6 @@ function FlyingLetter() {
 }
 
 // Tạo liên tục các chữ bay mỗi 100ms
-setInterval(createFlyingLetter, 100);
-setInterval(FlyingLetter, 100);
-setInterval(CreateFlingimg, 1500);
+setInterval(createFlyingLetter, 80);
+setInterval(FlyingLetter, 80);
+setInterval(CreateFlingimg, 1000);
