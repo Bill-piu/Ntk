@@ -37,14 +37,14 @@ function CreateFlingimg(){
   img.classList.add('imgg');
   const startimgX = Math.random() * window.innerWidth-50;
   img.style.left = `${startimgX}px`;
-  img.style.top = '-120px';
+  img.style.top = '-150px';
   const endY=window.innerHeight+200;
   img.style.setProperty('--x', `${startimgX}px`);
   img.style.setProperty('--y', `${endY}px`);
   container.appendChild(img);
   setTimeout(() => {
     container.removeChild(img);
-  }, 15000);
+  }, 18000);
 }
 
 const word="ILyNTK"
@@ -80,4 +80,4 @@ function FlyingLetter() {
 // Tạo liên tục các chữ bay mỗi 100ms
 setInterval(createFlyingLetter, 80);
 setInterval(FlyingLetter, 80);
-setInterval(CreateFlingimg, 1000);
+setInterval(CreateFlingimg, 900);
