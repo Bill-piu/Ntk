@@ -35,7 +35,8 @@ function CreateFlingimg(){
   const img = document.createElement("img");
   img.src=urll[(Math.floor(Math.random() * urll.length))];
   img.classList.add('imgg');
-  const startimgX = Math.random() * (window.innerWidth-170);
+  const a=window.innerWidth-170;
+  const startimgX = Math.floor(Math.random() * a);
   img.style.left = `${startimgX}px`;
   img.style.top = '-180px';
   const endY=window.innerHeight+200;
