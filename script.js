@@ -1,6 +1,6 @@
 const container = document.getElementById('letter-container');
 const letters = ["💓","💗","💕"];
-
+var aa=0;
 function createFlyingLetter() {
   const letter = document.createElement('span');
   letter.classList.add('letter');
@@ -36,7 +36,12 @@ function CreateFlingimg(){
   img.src=urll[(Math.floor(Math.random() * urll.length))];
   img.classList.add('imgg');
   const a=window.innerWidth-170;
-  const startimgX = Math.floor(Math.random() * a);
+  var startimgX = Math.floor(Math.random() * window.innerWidth-50);
+    if((startimgX<(aa+250)) && (startimgX >aa))
+  {
+    startimgX+=250;
+  }
+  aa=startimgX;
   img.style.left = `${startimgX}px`;
   img.style.top = '-180px';
   const endY=window.innerHeight+200;
@@ -45,7 +50,7 @@ function CreateFlingimg(){
   container.appendChild(img);
   setTimeout(() => {
     container.removeChild(img);
-  }, 18000);
+  }, 10000);
 }
 
 const word="ILyNTK"
@@ -81,4 +86,4 @@ function FlyingLetter() {
 // Tạo liên tục các chữ bay mỗi 100ms
 setInterval(createFlyingLetter, 80);
 setInterval(FlyingLetter, 80);
-setInterval(CreateFlingimg, 900);
+setInterval(CreateFlingimg, 1000);
