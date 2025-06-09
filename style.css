@@ -26,7 +26,7 @@ body {
     position: absolute;
     color: white;
     pointer-events: none;
-    animation: flyimg 18s linear infinite;
+    animation: flyimg 10s linear infinite;
     opacity: 0;
     size: 10%;
     border-radius: 8%;
